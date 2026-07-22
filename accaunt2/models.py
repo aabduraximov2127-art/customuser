@@ -10,7 +10,6 @@ class UserModel(AbstractUser):
 
     role = models.CharField(max_length=20, choices=ROLE, default="customer")
     phone = models.CharField(max_length=20, blank=True)
-    avatar = models.ImageField(upload_to="avatars/", blank=True, null=True)
 
     def __str__(self):
         return self.username
